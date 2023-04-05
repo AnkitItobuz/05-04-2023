@@ -1,0 +1,48 @@
+section {
+  display: flex;
+  gap: 10px;
+  justify-content: space-evenly;
+}
+#submit{
+  margin-left: 30%;
+
+}
+
+.box {
+  background-color:aqua ;
+  box-sizing: border-box;
+  border-radius: 10px;
+  height: 100px;
+  width: 350px;
+  margin-top: 20px;
+  box-shadow: 4px 3px 2px rgb(186, 203, 203);
+}
+
+.head {
+  background-color: brown;
+  height:100px;
+  width: 350px;
+  border-radius: 10px;
+  box-shadow: 6px 5px 5px rgb(184, 183, 187);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.head-title{
+  color: white;
+  font-size: 40px;
+  font-weight: 20px;
+  display: flex;
+  justify-content: center;
+}
+.head-content{
+  color: aliceblue;
+  font-size: 30px;
+  display: flex;
+  justify-content: center;
+}
+.box1{
+  color: rgb(84, 80, 80);
+  
+}
