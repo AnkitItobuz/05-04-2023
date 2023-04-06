@@ -1,38 +1,29 @@
 console.log("hello");
 
-const input = document.getElementById("input-box");
-const result = document.getElementById("input-box2");
-// const result = document.getElementById('result');
-const ans = document.getElementById("result1");
-// const submit = document.getElementById('submit-button');
 
-// // console.log(result);
-// // console.log(submit);
-// // console.log(input);
+const notesPreview = document.getElementsByClassName('notes-preview')[0]
 
-// // input.addEventListener('change', (e) => {
-// //  console.log(e.change.value);
-// //  result.innerText = e.target.value;
-// // });
+const notesArr = [];
+const input1 = document.getElementById("input-box");
+const input2 = document.getElementById("input-box2");
+const submit = document.getElementById("submit-button");
+submit.addEventListener("submit", function (e) {
+  e.preventDefault();
 
-// submit.addEventListener('submit',function () {
-//   alert("hi");
+  notesArr.push(input1.value, input2.value);
 
-//  console.log(input.value);
-// })
+  showNotes();
+});
 
-document
-  .getElementById("submit-button")
-  .addEventListener("submit", function (e) {
-    e.preventDefault();
-    // result.innerText = input.value;
-    const titleInput = document.getElementById("title");
-    const contentInput = document.getElementById("content");
+function showNotes() {
+  notesPreview.innerHTML = '';
 
-    ans.titleInput = titleInput.value;
-    ans.innerText = contentInput.value;
 
-    console.log(result.value);
-
-    console.log(input.value);
-  });
+  for (let a = 0; a < notesArr.length; a++) {
+    const tag = document.createElement("div");
+    const text = document.createTextNode(notesArr[a]);
+    tag.append(text);
+    notesPreview.appendChild(tag);
+    tag.classList.add("box");
+  }
+}
